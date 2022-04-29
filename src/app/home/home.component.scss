@@ -1,0 +1,2150 @@
+body {
+    background: #ffffff;
+    color: #898989;
+    font-family: "Poppins", helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h2 {
+    color: #292929;
+    font-weight: 600;
+}
+
+h4 {
+    color: #292929;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+a {
+    color: #292929;
+    text-decoration: none !important;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover {
+    transition: all 0.5s ease-in-out 0s;
+}
+
+p {
+    margin: 25px 0;
+    padding: 0;
+    font-size: 15px;
+    color: #999999;
+    line-height: 28px;
+}
+
+::-moz-selection {
+    background: #b8a07e;
+    color: #fff;
+}
+
+::selection {
+    background: #b8a07e;
+    color: #fff;
+}
+
+.btn {
+    background: #333;
+    border: medium none;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #fff;
+}
+
+.padDiv {
+    padding: 30px 20px;
+}
+
+.section-title {
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid #999;
+    border-radius: 0;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: 0.1em;
+    padding-left: 10px;
+    margin: 0 0 25px 0;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.paddsection {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.paddsections {
+    padding-top: 90px;
+    padding-bottom: 90px !important;
+}
+
+.hvr-shutter-in-horizontal::before {
+    background: #333;
+}
+
+.hvr-shutter-in-horizontal:hover {
+    background: #b8a07e;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.main-content {
+    padding-top: 140px;
+}
+
+
+
+
+.output {
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+/* Cursor Styling */
+
+.cursor::after {
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    background-color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+h1.cursor::after {
+    height: 24px;
+    width: 13px;
+}
+
+p.cursor::after {
+    height: 13px;
+    width: 6px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+/**
+  * Desktop Navigation 
+  */
+
+.navbar-brand{
+    img{
+        height: 3rem;
+        width: auto;
+    }
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.87);
+    position: fixed;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7e7d7d;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #b8a07e;
+}
+
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+    min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.navbar .dropdown ul a i {
+    font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+    color: #b8a07e;
+}
+
+.navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+
+    .navbar .dropdown .dropdown:hover>ul {
+        left: -100%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1890px) {
+
+    // Laptop/desktop CSS-----------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------
+    // }---------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
+    
+    /*--------------------------------------------------------------
+  # DLA
+  --------------------------------------------------------------*/
+
+.dla {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(52deg, #b8a07e 13.98%, #fff 13.98%, #fff 50%, #b8a07e 50%, #b8a07e 63.98%, #fff 63.98%, #fff 100%);
+
+    img {
+        margin: 0;
+        height: 20vh;
+        width: auto;
+    }
+}
+
+.dla-para {
+    color: #292929;
+    font-family: "Poppins", helvetica;
+}
+
+.dla-content {
+    margin-top: 10vh;
+    width: 50%;
+}
+
+.dla-head {
+    color: #292929;
+    font-weight: 800;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+
+/*--------------------------------------------------------------
+  # Initiatives
+  --------------------------------------------------------------*/
+
+
+.Initiatives{
+    height: auto;
+    width: 100%;
+    
+}
+
+.initiatives-head{
+   margin-top: 5vh;
+   display: flex;
+   justify-content: center;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+    }
+}
+
+.initiatives-list{
+    display: flex;
+    margin-top: 10vh;
+    justify-content: space-around;
+    img{
+        border-bottom: 4px solid #7e7d7d;
+        height: 20vh;
+        width: auto;
+        margin-bottom: 5vh;
+    }
+}
+
+/*--------------------------------------------------------------
+  # IYS
+  --------------------------------------------------------------*/
+
+  .IYS {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/IYS\ Slids.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+.iys-para {
+    color: #ffffff;
+    font-family: "Poppins", helvetica;
+}
+
+.iys-content {
+    margin-top: 10vh;
+    width: 50%;
+    h1{
+        color: #ffffff;
+    }
+}
+
+.iys-head {
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+/*--------------------------------------------------------------
+  # GRAM ABHIYAAN
+  --------------------------------------------------------------*/
+
+  .gramabhiyaan {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Gram\ Abhiyaan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # LEADERS
+  --------------------------------------------------------------*/
+
+  .leaders {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Leader\'s\ Talk.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% 50%;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # BOOTCAMP
+  --------------------------------------------------------------*/
+
+  .BootCamp {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Bootcamp.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        color: #ffffff;
+        margin-top: 1rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # 8 years
+  --------------------------------------------------------------*/
+
+  .yrs80m {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Modi\ ji.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+   //FOOTER
+   
+    .phoneandemail{
+        display: flex;
+        justify-content: center;
+        img{
+            height: 2rem;
+            width: auto;
+            margin-left: 2rem;
+        }
+    }
+
+
+/*--------------------------------------------------------------
+  # Hero
+  --------------------------------------------------------------*/
+
+.outerhomebg{
+    background: linear-gradient(328deg, #b8a07e, #3083d4);
+    background-size: 600% 600%;
+    animation: grad 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+#hero {
+    background: url("../../assets/img/bgcollage.png") repeat scroll center center/cover;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes grad {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#hero .hero-content {
+    height: 100vh;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #b8a07e;
+    width:fit-content;
+    padding: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-content .list-social li {
+    float: left;
+    margin-right: 20px;
+}
+
+.hero-content .list-social li i {
+    color: #fff;
+    font-size: 15px;
+}
+
+.list-social{
+    margin-left: 2rem;
+}
+
+}
+
+@media (min-width: 250px) and (max-width: 600px) {
+
+    // Mobile CSS-----------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+
+       /*--------------------------------------------------------------
+  # DLA
+  --------------------------------------------------------------*/
+
+.dla {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(52deg, #b8a07e 13.98%, #fff 13.98%, #fff 50%, #b8a07e 50%, #b8a07e 63.98%, #fff 63.98%, #fff 100%);
+
+    img {
+        margin: 0;
+        height: 12vh;
+        width: auto;
+    }
+}
+
+.dla-para {
+    color: #292929;
+    font-family: "Poppins", helvetica;
+}
+
+.dla-content {
+    margin-top: 10vh;
+    width: 80%;
+}
+
+.dla-head {
+    color: #292929;
+    font-weight: 800;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+
+/*--------------------------------------------------------------
+  # Initiatives
+  --------------------------------------------------------------*/
+
+
+.Initiatives{
+    height: auto;
+    width: 100%;
+    
+}
+
+.initiatives-head{
+   margin-top: 5vh;
+   display: flex;
+   justify-content: center;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+.initiatives-list{
+    display: flex;
+    margin-top: 10vh;
+    justify-content: space-around;
+    img{
+        border-bottom: 4px solid #7e7d7d;
+        height: 9vh;
+        width: auto;
+        margin-bottom: 5vh;
+    }
+}
+
+/*--------------------------------------------------------------
+  # IYS
+  --------------------------------------------------------------*/
+
+  .IYS {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/IYS\ Slids.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+.iys-para {
+    color: #ffffff;
+    font-family: "Poppins", helvetica;
+}
+
+.iys-content {
+    margin-top: 10vh;
+    width: 80%;
+    h1{
+        color: #ffffff;
+    }
+}
+
+.iys-head {
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+/*--------------------------------------------------------------
+  # GRAM ABHIYAAN
+  --------------------------------------------------------------*/
+
+  .gramabhiyaan {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Gram\ Abhiyaan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # LEADERS
+  --------------------------------------------------------------*/
+
+  .leaders {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Leader\'s\ Talk.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% 50%;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # BOOTCAMP
+  --------------------------------------------------------------*/
+
+  .BootCamp {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Bootcamp.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        color: #ffffff;
+        margin-top: 1rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # 8 years
+  --------------------------------------------------------------*/
+
+  .yrs80m {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Modi\ ji.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 95%;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+   //FOOTER
+   
+    .phoneandemail{
+        display: flex;
+        justify-content: center;
+        font-size: 0.5rem;
+        img{
+            height: 2rem;
+            width: auto;
+            margin-left: 2rem;
+        }
+    }
+
+
+/*--------------------------------------------------------------
+  # Hero
+  --------------------------------------------------------------*/
+
+.outerhomebg{
+    background: linear-gradient(328deg, #b8a07e, #3083d4);
+    background-size: 600% 600%;
+    animation: grad 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes grad {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#hero {
+    background: url("../../assets/img/bgcollageVertical.png") repeat scroll center center/cover;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    height: 100vh;
+    width: 100%;
+}
+
+#hero .hero-content {
+    height: 100vh;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #b8a07e;
+    width:fit-content;
+    padding: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-content .list-social li {
+    float: left;
+    margin-right: 20px;
+}
+
+.hero-content .list-social li i {
+    color: #fff;
+    font-size: 15px;
+}
+
+.list-social{
+    margin-left: 2rem;
+}
+
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+
+    // Tablet -----------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------
+
+           /*--------------------------------------------------------------
+  # DLA
+  --------------------------------------------------------------*/
+
+.dla {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(52deg, #b8a07e 13.98%, #fff 13.98%, #fff 50%, #b8a07e 50%, #b8a07e 63.98%, #fff 63.98%, #fff 100%);
+
+    img {
+        margin: 0;
+        height: 14vh;
+        width: auto;
+    }
+}
+
+.dla-para {
+    color: #292929;
+    font-family: "Poppins", helvetica;
+}
+
+.dla-content {
+    margin-top: 10vh;
+    width: 50%;
+}
+
+.dla-head {
+    color: #292929;
+    font-weight: 800;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+
+/*--------------------------------------------------------------
+  # Initiatives
+  --------------------------------------------------------------*/
+
+
+.Initiatives{
+    height: auto;
+    width: 100%;
+    
+}
+
+.initiatives-head{
+   margin-top: 5vh;
+   display: flex;
+   justify-content: center;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+    }
+}
+
+.initiatives-list{
+    display: flex;
+    margin-top: 10vh;
+    justify-content: space-around;
+    img{
+        border-bottom: 4px solid #7e7d7d;
+        height: 20vh;
+        width: auto;
+        margin-bottom: 5vh;
+    }
+}
+
+/*--------------------------------------------------------------
+  # IYS
+  --------------------------------------------------------------*/
+
+  .IYS {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/IYS\ Slids.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+.iys-para {
+    color: #ffffff;
+    font-family: "Poppins", helvetica;
+}
+
+.iys-content {
+    margin-top: 10vh;
+    width: 50%;
+    h1{
+        color: #ffffff;
+    }
+}
+
+.iys-head {
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+/*--------------------------------------------------------------
+  # GRAM ABHIYAAN
+  --------------------------------------------------------------*/
+
+  .gramabhiyaan {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Gram\ Abhiyaan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # LEADERS
+  --------------------------------------------------------------*/
+
+  .leaders {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Leader\'s\ Talk.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% 50%;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # BOOTCAMP
+  --------------------------------------------------------------*/
+
+  .BootCamp {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Bootcamp.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        color: #ffffff;
+        margin-top: 1rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # 8 years
+  --------------------------------------------------------------*/
+
+  .yrs80m {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Modi\ ji.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+   //FOOTER
+   
+    .phoneandemail{
+        display: flex;
+        justify-content: center;
+        img{
+            height: 2rem;
+            width: auto;
+            margin-left: 2rem;
+        }
+    }
+
+
+/*--------------------------------------------------------------
+  # Hero
+  --------------------------------------------------------------*/
+
+.outerhomebg{
+    background: linear-gradient(328deg, #b8a07e, #3083d4);
+    background-size: 600% 600%;
+    animation: grad 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+#hero {
+    background: url("../../assets/img/bgcollage.png") repeat scroll center center/cover;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes grad {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#hero .hero-content {
+    height: 100vh;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #b8a07e;
+    width:fit-content;
+    padding: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-content .list-social li {
+    float: left;
+    margin-right: 20px;
+}
+
+.hero-content .list-social li i {
+    color: #fff;
+    font-size: 15px;
+}
+
+.list-social{
+    margin-left: 2rem;
+}
+
+
+}
+
+@media (min-width: 1891px) {
+  
+    // Bigger Laptop/desktop CSS-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------------
+ // }---------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+          /*--------------------------------------------------------------
+  # DLA
+  --------------------------------------------------------------*/
+
+  .dla {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(52deg, #b8a07e 13.98%, #fff 13.98%, #fff 50%, #b8a07e 50%, #b8a07e 63.98%, #fff 63.98%, #fff 100%);
+
+    img {
+        margin: 0;
+        height: 20vh;
+        width: auto;
+    }
+}
+
+.dla-para {
+    color: #292929;
+    font-family: "Poppins", helvetica;
+}
+
+.dla-content {
+    margin-top: 10vh;
+    width: 50%;
+}
+
+.dla-head {
+    color: #292929;
+    font-weight: 800;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+
+/*--------------------------------------------------------------
+  # Initiatives
+  --------------------------------------------------------------*/
+
+
+.Initiatives{
+    height: auto;
+    width: 100%;
+    
+}
+
+.initiatives-head{
+   margin-top: 5vh;
+   display: flex;
+   justify-content: center;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+    }
+}
+
+.initiatives-list{
+    display: flex;
+    margin-top: 10vh;
+    justify-content: space-around;
+    img{
+        border-bottom: 4px solid #7e7d7d;
+        height: 20vh;
+        width: auto;
+        margin-bottom: 5vh;
+    }
+}
+
+/*--------------------------------------------------------------
+  # IYS
+  --------------------------------------------------------------*/
+
+  .IYS {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/IYS\ Slids.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+.iys-para {
+    color: #ffffff;
+    font-family: "Poppins", helvetica;
+}
+
+.iys-content {
+    margin-top: 10vh;
+    width: 50%;
+    h1{
+        color: #ffffff;
+    }
+}
+
+.iys-head {
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+/*--------------------------------------------------------------
+  # GRAM ABHIYAAN
+  --------------------------------------------------------------*/
+
+  .gramabhiyaan {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Gram\ Abhiyaan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # LEADERS
+  --------------------------------------------------------------*/
+
+  .leaders {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Leader\'s\ Talk.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% 50%;
+    h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # BOOTCAMP
+  --------------------------------------------------------------*/
+
+  .BootCamp {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Slides\ Bootcamp.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        color: #ffffff;
+        margin-top: 1rem;
+    }
+}
+
+/*--------------------------------------------------------------
+  # 8 years
+  --------------------------------------------------------------*/
+
+  .yrs80m {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.347), rgba(0, 0, 0, 0.949)),
+        url("../../assets/img/Modi\ ji.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2, h1{
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+    }
+    h2{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+   //FOOTER
+   
+    .phoneandemail{
+        display: flex;
+        justify-content: center;
+        img{
+            height: 2rem;
+            width: auto;
+            margin-left: 2rem;
+        }
+    }
+
+
+/*--------------------------------------------------------------
+  # Hero
+  --------------------------------------------------------------*/
+
+.outerhomebg{
+    background: linear-gradient(328deg, #b8a07e, #3083d4);
+    background-size: 600% 600%;
+    animation: grad 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+#hero {
+    background: url("../../assets/img/bgcollage.png") repeat scroll center center/cover;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes grad {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#hero .hero-content {
+    height: 100vh;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #b8a07e;
+    width:fit-content;
+    padding: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-content .list-social li {
+    float: left;
+    margin-right: 20px;
+}
+
+.hero-content .list-social li i {
+    color: #fff;
+    font-size: 15px;
+}
+
+.list-social{
+    margin-left: 2rem;
+}
+
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  About
+  /*-----------------------------------------------------------------------------------*/
+#about {
+    width: 100%;
+    height: auto;
+    background: #f7f7f7;
+    padding-top: 120px;
+}
+
+#about .div-img-bg {
+    padding-bottom: 30px;
+    border: 20px solid #b8a07e;
+}
+
+#about .div-img-bg .about-img img {
+    width: 100%;
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+    margin-top: -60px;
+    margin-left: 40px;
+    height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+#about .about-descr .p-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    text-align: left;
+}
+
+#about .about-descr .separator {
+    max-width: 80%;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+
+
+/* main content */
+.main-content {
+    background: #f7f7f7;
+}
+
+.main-content .container-main {
+    display: inline-block;
+    width: 100%;
+}
+
+.main-content .container-main .block-main {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.container-main .block-main .content-main {
+    background: #fff none repeat scroll 0 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.journal-txt h4 a {
+    display: block;
+    font-size: 19px;
+    line-height: 24px;
+    margin: 0 0 13px 0;
+    font-weight: 500;
+    color: #292929;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.journal-txt h4 a:hover {
+    color: #b8a07e;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.post-meta ul li {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-transform: capitalize;
+    display: inline-block;
+    float: none;
+}
+
+.content-main .post-meta a {
+    color: #a2a2a2;
+    margin-left: 5px;
+}
+
+/* Commonts */
+.comments {
+    background: #fff;
+}
+
+.entry-comments h6 {
+    margin-right: 10px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.entry-comments-item {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.entry-comments-avatar {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.entry-comments-body {
+    padding-left: 86px;
+}
+
+.entry-comments-author {
+    margin-right: 10px;
+    font-size: 13px;
+    color: #292929;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.rep {
+    font-size: 13px;
+    color: #292929;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.entry-comments span a {
+    font-size: 13px;
+    color: #999;
+}
+
+.entry-comments-reply {
+    padding-left: 10%;
+}
+
+/* Commonts form */
+.cmt {
+    background: #fff;
+}
+
+blockquote {
+    padding: 40px;
+    background-color: #f2f2f2;
+    margin: 30px 0;
+    border: none;
+    border-left: 4px solid #b8a07e;
+}
+
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+
+#footer {
+    background: #f7f7f7;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#footer .socials-media {
+    width: 100%;
+}
+
+#footer .socials-media ul {
+    display: inline-block;
+    float: none;
+    margin: 0 0 20px 0;
+}
+
+#footer .socials-media ul li {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#footer .socials-media ul li a {
+    margin-left: 1rem;
+    font-size: 24px;
+    color: #999;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    background: transparent;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#footer .socials-media ul li a:hover {
+    color: #b8a07e;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#footer p {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.credits {
+    font-size: 13px;
+}
+
+/** Width between 1200x to 0
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+/** Width between 992px to 1199px
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+/** Width between 768px to 991px
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Navbar */
+    nav {
+        padding: 10px 15px;
+    }
+
+    .nav-menu {
+        margin-top: 40px;
+        display: none;
+        float: none;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #f7f7f7;
+        line-height: 45px;
+        margin-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .responsive {
+        float: right;
+        padding-top: 15px;
+        display: block;
+    }
+
+    /* About */
+    .head-info .header-content .cmaster h1 {
+        font-size: 32px;
+    }
+
+    #about .div-img-bg {
+        padding: 0;
+    }
+
+    #about .div-img-bg .about-img img {
+        margin-top: 0%;
+        margin-left: calc(0% - 0px);
+    }
+
+    #about .about-descr .p-heading {
+        font-size: 20px;
+    }
+
+    #about .about-descr .separator {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* portfolio */
+    #portfolio .portfolio-list .nav li {
+        float: none;
+        margin: 20px;
+        display: inline-block;
+    }
+
+    /* journal */
+    #journal .journal-block .journal-info {
+        margin-bottom: 30px;
+    }
+
+    /* Contact */
+    .contact-contact {
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+    #footer .socials-media ul li {
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+        display: inline-block;
+    }
+}
+
+/** Width between 767px to 0
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+@media (max-width: 767px) {
+
+    /* Navbar */
+    nav {
+        padding: 20px 15px;
+    }
+
+    .nav-menu {
+        margin-top: 40px;
+        display: none;
+        float: none;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #f7f7f7;
+        line-height: 45px;
+        margin-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .responsive {
+        float: right;
+        padding-top: 15px;
+        display: block;
+    }
+
+    /* About */
+    .head-info .header-content h1 {
+        font-size: 32px;
+    }
+
+    #about .div-img-bg {
+        padding: 0;
+    }
+
+    #about .div-img-bg .about-img img {
+        margin-top: 0%;
+        margin-left: calc(0% - 0px);
+    }
+
+    #about .about-descr .p-heading {
+        font-size: 20px;
+    }
+
+    #about .about-descr .separator {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* portfolio */
+    #portfolio .portfolio-list .nav li {
+        float: none;
+        margin: 20px;
+        display: inline-block;
+    }
+
+    /* journal */
+    #journal .journal-block .journal-info {
+        margin-bottom: 30px;
+    }
+
+    /* Contact */
+    .contact-contact {
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+    #footer .socials-media ul li {
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+        display: inline-block;
+    }
+}
+
+/** Width between 600px to 0
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    nav {
+        padding: 20px 15px;
+    }
+
+    .nav-menu {
+        margin-top: 40px;
+        display: none;
+        float: none;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #f7f7f7;
+        line-height: 45px;
+        margin-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .responsive {
+        float: right;
+        padding-top: 15px;
+        display: block;
+    }
+
+    /* About */
+    .head-info .header-content h1 {
+        font-size: 32px;
+    }
+
+    #about .div-img-bg {
+        padding: 0;
+    }
+
+    #about .div-img-bg .about-img img {
+        margin-top: 0%;
+        margin-left: calc(0% - 0px);
+    }
+
+    #about .about-descr .p-heading {
+        font-size: 20px;
+    }
+
+    #about .about-descr .separator {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* portfolio */
+    #portfolio .portfolio-list .nav li {
+        float: none;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    /* journal */
+    #journal .journal-block .journal-info {
+        margin-bottom: 30px;
+    }
+
+    /* Contact */
+    .contact-contact {
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+    #footer .socials-media ul li {
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+        display: inline-block;
+    }
+}
+
+/** Width between 480px to 0
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+@media (max-width: 480px) {
+
+    /* Navbar */
+    nav {
+        padding: 20px 15px;
+    }
+
+    .nav-menu {
+        margin-top: 40px;
+        display: none;
+        float: none;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #f7f7f7;
+        line-height: 45px;
+        margin-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .responsive {
+        float: right;
+        padding-top: 15px;
+        display: block;
+    }
+
+    /* About */
+    .head-info .header-content h1 {
+        font-size: 32px;
+    }
+
+    #about .div-img-bg {
+        padding: 0;
+    }
+
+    #about .div-img-bg .about-img img {
+        margin-top: 0%;
+        margin-left: calc(0% - 0px);
+    }
+
+    #about .about-descr .p-heading {
+        font-size: 20px;
+    }
+
+    #about .about-descr .separator {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* portfolio */
+    #portfolio .portfolio-list .nav li {
+        float: none;
+        margin: 20px;
+    }
+
+    /* journal */
+    #journal .journal-block .journal-info {
+        margin-bottom: 30px;
+    }
+
+    /* Contact */
+    .contact-contact {
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+    #footer .socials-media ul li {
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+        display: inline-block;
+    }
+}
+
+/** Width between 320px to 0
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   */
+@media (max-width: 320px) {
+
+    /* Navbar */
+    nav {
+        padding: 20px 15px;
+    }
+
+    .nav-menu {
+        margin-top: 40px;
+        display: none;
+        float: none;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #f7f7f7;
+        line-height: 45px;
+        margin-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .responsive {
+        float: right;
+        padding-top: 15px;
+        display: block;
+    }
+
+    /* About */
+    .head-info .header-content h1 {
+        font-size: 32px;
+    }
+
+    #about .div-img-bg {
+        padding: 0;
+    }
+
+    #about .div-img-bg .about-img img {
+        margin-top: 0%;
+        margin-left: calc(0% - 0px);
+    }
+
+    #about .about-descr .p-heading {
+        font-size: 20px;
+    }
+
+    #about .about-descr .separator {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* portfolio */
+    #portfolio .portfolio-list .nav li {
+        float: none;
+        margin: 20px;
+    }
+
+    /* journal */
+    #journal .journal-block .journal-info {
+        margin-bottom: 30px;
+    }
+
+    /* Contact */
+    .contact-contact {
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+    #footer .socials-media ul li {
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+        display: inline-block;
+    }
+
+    /* Single page */
+    .entry-comments-body span {
+        display: inline-block;
+        margin-right: 0;
+    }
+}
