@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sankalpprayagshukla": {
+      "hosting": {
+        "SankalpPortfolio": [
+          "sankalpprayagshukla"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sankalpprayagshukla"
+  }
+}
